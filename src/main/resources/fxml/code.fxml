@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1018.0" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.CodeController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1018.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background.png" />
+         </image></ImageView>
+      <Button fx:id="buttonSubmit" layoutX="434.0" layoutY="572.0" mnemonicParsing="false" onAction="#onClickSubmit" styleClass="code-buttons" text="Submit">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Gabriola" size="26.0" />
+         </font></Button>
+      <Button fx:id="buttonGoBack" layoutX="32.0" layoutY="640.0" mnemonicParsing="false" onAction="#onClickBack" styleClass="code-buttons" text="Go back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Gabriola" size="26.0" />
+         </font></Button>
+      <TextField fx:id="fieldAnswer" alignment="CENTER_RIGHT" editable="false" layoutX="176.0" layoutY="169.6" prefHeight="100.8" prefWidth="665.6" styleClass="code-text-area">
+         <font>
+            <Font name="Gabriola" size="51.0" />
+         </font></TextField>
+      <Button fx:id="buttonBack" layoutX="570.0" layoutY="572.0" mnemonicParsing="false" onAction="#onClickBackSpace" styleClass="code-buttons" text="Back space">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Gabriola" size="26.0" />
+         </font></Button>
+      <Button fx:id="button1" layoutX="176.0" layoutY="308.8" mnemonicParsing="false" onAction="#onClick1" prefHeight="83.2" prefWidth="107.2" styleClass="solve-riddle-label" text="1">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button2" layoutX="316.0" layoutY="308.8" maxHeight="83.2" maxWidth="107.2" mnemonicParsing="false" onAction="#onClick2" prefHeight="83.2" prefWidth="107.2" styleClass="solve-riddle-label" text="2">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button3" layoutX="456.0" layoutY="308.8" mnemonicParsing="false" onAction="#onClick3" prefHeight="83.2" prefWidth="107.2" styleClass="solve-riddle-label" text="3">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button4" layoutX="594.4" layoutY="308.8" mnemonicParsing="false" onAction="#onClick4" prefHeight="83.2" prefWidth="107.2" styleClass="solve-riddle-label" text="4">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button5" layoutX="734.4" layoutY="308.8" mnemonicParsing="false" onAction="#onClick5" prefHeight="83.2" prefWidth="107.2" styleClass="solve-riddle-label" text="5">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button6" layoutX="176.0" layoutY="440.0" mnemonicParsing="false" onAction="#onClick6" prefHeight="83.2" prefWidth="107.2" styleClass="solve-riddle-label" text="6">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button7" layoutX="316.0" layoutY="440.0" mnemonicParsing="false" onAction="#onClick7" prefHeight="83.2" prefWidth="107.2" styleClass="solve-riddle-label" text="7">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button8" layoutX="456.0" layoutY="440.0" mnemonicParsing="false" onAction="#onClick8" prefHeight="83.2" prefWidth="107.2" styleClass="solve-riddle-label" text="8">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button9" layoutX="594.4" layoutY="440.0" mnemonicParsing="false" onAction="#onClick9" prefHeight="83.2" prefWidth="107.2" styleClass="solve-riddle-label" text="9">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button0" layoutX="734.4" layoutY="440.0" mnemonicParsing="false" onAction="#onClick0" prefHeight="83.2" prefWidth="107.2" styleClass="solve-riddle-label" text="0">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label alignment="CENTER" layoutX="335.0" layoutY="68.0" styleClass="enter-code-label" text="Enter the code" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="84.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTimer" contentDisplay="TEXT_ONLY" layoutX="870.0" layoutY="640.0" prefWidth="120.0" styleClass="timer-label" text="TIMER" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+      </Label>
+      <Button fx:id="diaryButton" layoutX="304.0" layoutY="572.8" mnemonicParsing="false" onAction="#onGoToDiary" styleClass="code-buttons" text="Diary">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Gabriola" size="26.0" />
+         </font></Button>
+      <Pane fx:id="selfOverlay" onMouseClicked="#backToNormalRoom" prefHeight="720.0" prefWidth="1018.0" visible="false">
+         <children>
+            <ImageView fx:id="overlayImage1" fitHeight="720.0" fitWidth="1018.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/white_overlay.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="185.0" fitWidth="406.0" layoutX="306.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/self_bubble.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="385.0" layoutY="420.0" styleClass="click-to-continue-label" text="Click anywhere to continue">
+               <font>
+                  <Font name="Gabriola" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelThought" alignment="CENTER" layoutX="338.0" layoutY="245.0" prefHeight="143.0" prefWidth="343.0" styleClass="moriarty-thinking-label" text="It seems Moriarty has the Key...Perhaps I'll brew some tea as a means to obtain the key." textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Gabriola" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

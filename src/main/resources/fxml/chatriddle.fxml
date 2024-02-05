@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1018.0" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.ChatRiddleController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1018.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="inputText" layoutX="110.0" layoutY="576.0" onKeyPressed="#onEnterPressed" prefHeight="33.0" prefWidth="775.0" promptText="Type here..." styleClass="text-entry-area">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Gabriola" size="23.0" />
+         </font>
+      </TextField>
+      <Button fx:id="buttonSend" layoutX="367.0" layoutY="634.0" mnemonicParsing="false" onAction="#onSendMessage" style="-fx-focus-color: transparent; -fx-faint-focus-color: transparent;" styleClass="chat-button" text="Send">
+         <font>
+            <Font name="Gabriola" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="buttonGoBack" layoutX="569.0" layoutY="634.0" mnemonicParsing="false" onAction="#onGoBack" prefHeight="56.0" prefWidth="113.0" styleClass="chat-button" text="Go Back">
+         <font>
+            <Font name="Gabriola" size="27.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="labelTimer" contentDisplay="TEXT_ONLY" layoutX="870.0" layoutY="640.0" prefWidth="120.0" styleClass="timer-label" text="TIMER" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonHint" layoutX="469.0" layoutY="634.0" mnemonicParsing="false" onAction="#onSendHint" prefHeight="53.0" prefWidth="79.0" styleClass="chat-button" text="Hint">
+         <font>
+            <Font name="Gabriola" size="27.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="labelHint" layoutX="74.0" layoutY="640.0" styleClass="hint-label" text="Hints:" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="48.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="chatTextArea" editable="false" layoutX="82.0" layoutY="98.0" opacity="0.8" prefHeight="470.0" prefWidth="835.0" wrapText="true">
+         <font>
+            <Font name="Gabriola" size="20.0" />
+         </font></TextArea>
+      <ImageView fx:id="moriartyNormal" fitHeight="92.0" fitWidth="73.0" layoutX="587.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/moriarty.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="normalBubble" fitHeight="102.0" fitWidth="338.0" layoutX="279.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/speech_bubble_smaller.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="riddleLabel" layoutX="317.0" layoutY="18.0" prefHeight="58.0" prefWidth="304.0" styleClass="solve-riddle-label" text="Solve my riddle!">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="moriartyThinking" fitHeight="239.0" fitWidth="231.0" layoutX="439.0" layoutY="210.0" onMouseClicked="#onClickMoriartyThinking" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/moriarty_thinking.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="thinkingBubble" fitHeight="275.0" fitWidth="450.0" layoutX="35.0" layoutY="70.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../images/speech_bubble_smaller.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelLoading" layoutX="96.0" layoutY="112.0" prefHeight="182.0" prefWidth="327.0" styleClass="moriarty-thinking-label" text="My dear adversary, prepare for a tantalizing hint that will lead you deeper down the rabbit hole..." textAlignment="CENTER" textOverrun="CLIP" visible="false" wrapText="true">
+         <font>
+            <Font name="Gabriola" size="23.0" />
+         </font>
+      </Label>
+      <Pane fx:id="moriartyOverlay" prefHeight="720.0" prefWidth="1018.0" visible="false">
+         <children>
+            <ImageView fx:id="overlayImage" fitHeight="720.0" fitWidth="1018.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/white_overlay.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="244.0" fitWidth="486.0" layoutX="246.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/speech_bubble_smaller.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="250.0" fitWidth="169.0" layoutX="671.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/moriarty.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelMessage" alignment="TOP_LEFT" layoutX="300.0" layoutY="234.0" prefHeight="110.0" prefWidth="363.0" styleClass="text-entry-area" text="Well played! You have indeed deciphered my riddle. Certainly worthy of receiving the key to the diary." textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Gabriola" size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="backToKitchenButton" layoutX="439.0" layoutY="417.0" mnemonicParsing="false" onAction="#onGoBack" styleClass="back-to-kitchen-button" text="Back to lounge">
+               <font>
+                  <Font name="Gabriola" size="29.0" />
+               </font>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+   </children>
+</AnchorPane>

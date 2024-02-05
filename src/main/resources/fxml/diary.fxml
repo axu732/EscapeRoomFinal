@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1018.0" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.DiaryController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1018.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background.png" />
+         </image></ImageView>
+      <ImageView fx:id="diaryImage" fitHeight="579.0" fitWidth="981.0" layoutX="18.0" layoutY="61.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/diary_book.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="71.0" fitWidth="161.0" layoutX="87.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/red_circle.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonGoBack" layoutX="453.0" layoutY="642.0" mnemonicParsing="false" onAction="#onClickBack" styleClass="back-to-kitchen-button" text="Go Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Gabriola" size="29.0" />
+         </font></Button>
+      <Label fx:id="labelTimer" contentDisplay="TEXT_ONLY" layoutX="870.0" layoutY="640.0" prefWidth="120.0" styleClass="timer-label" text="TIMER" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDate" alignment="TOP_LEFT" layoutX="99.0" layoutY="101.0" prefHeight="120.0" prefWidth="123.0" styleClass="diary-date" text="04/05/1891" wrapText="true">
+         <font>
+            <Font name="Gabriola" size="29.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="413.0" layoutY="10.0" styleClass="holmes-diary-label" text="Holmes' Diary" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="44.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

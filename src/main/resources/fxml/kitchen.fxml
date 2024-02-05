@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1018.0" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.KitchenController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1018.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/kitchen.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="hintTextArea" editable="false" opacity="0.8" prefHeight="193.0" prefWidth="615.0" styleClass="chat-text-area" wrapText="true" />
+      <Label fx:id="labelTimer" contentDisplay="TEXT_ONLY" layoutX="870.0" layoutY="640.0" prefWidth="120.0" styleClass="timer-label" text="TIMER" textAlignment="RIGHT">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+      </Label>
+      <Label fx:id="hintLabel" layoutX="74.0" layoutY="640.0" styleClass="hint-label" text="Hints:">
+         <font>
+            <Font name="Gabriola" size="48.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="recipe" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" layoutX="765.0" layoutY="425.0" onMouseClicked="#goToRecipe" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="76.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <Rectangle fx:id="teaMaking" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="75.0" layoutX="400.0" layoutY="409.0" onMouseClicked="#goToTeaSet" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="180.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <Rectangle fx:id="door" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="435.0" layoutX="945.0" layoutY="228.0" onMouseClicked="#goToEntrance" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="73.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <ImageView fx:id="moriarty" fitHeight="152.0" fitWidth="128.0" layoutX="880.0" layoutY="16.0" onMouseClicked="#goToChat" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/moriarty.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="comeToLoungeBubble" fitHeight="146.0" fitWidth="280.0" layoutX="623.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/speech_bubble_smaller.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="comeToLoungeLabel" layoutX="665.0" layoutY="19.0" prefHeight="75.0" prefWidth="199.0" styleClass="come-to-lounge-label" text="Come to the lounge. I can't speak to you all the way over there!" textAlignment="CENTER" textOverrun="CLIP" visible="false" wrapText="true">
+         <font>
+            <Font name="Gabriola" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="room" focusTraversable="true" onKeyPressed="#onKeyPressed" onKeyReleased="#onKeyReleased" prefHeight="720.0" prefWidth="1018.0" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.RoomController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1018.0">
+         <image>
+            <Image url="@../images/lounge.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="hintTextArea" opacity="0.8" prefHeight="193.0" prefWidth="615.0" styleClass="chat-text-area" wrapText="true" />
+      <Label fx:id="hintLabel" layoutX="74.0" layoutY="640.0" styleClass="hint-label" text="Hints:" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="48.0" />
+         </font>
+      </Label>
+
+      <Label fx:id="labelTimer" contentDisplay="TEXT_ONLY" layoutX="870.0" layoutY="640.0" prefWidth="120.0" styleClass="timer-label" text="TIMER" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="52.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTimerBlack" alignment="CENTER" contentDisplay="CENTER" layoutX="870.0" layoutY="640.0" prefHeight="48.0" prefWidth="120.0" text="TIMER" textAlignment="RIGHT" textFill="#7b9cbf" visible="false">
+         <font>
+            <Font name="Gabriola" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="rectangleDiary" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff" focusTraversable="true" height="45.0" layoutX="523.0" layoutY="536.0" onMouseClicked="#onClickDiary" opacity="0.0" rotate="-154.4" stroke="BLACK" strokeType="INSIDE" width="66.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <Rectangle fx:id="rectangleViolin" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff" focusTraversable="true" height="145.0" layoutX="629.0" layoutY="406.0" onMouseClicked="#onClickViolin" opacity="0.0" rotate="-24.0" stroke="BLACK" strokeType="INSIDE" width="66.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <Rectangle fx:id="rectangleDoor" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff" focusTraversable="true" height="446.0" layoutY="187.0" onMouseClicked="#onClickDoor" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="129.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <Rectangle fx:id="rectangleMagnifyingGlass" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="633.0" layoutY="674.0" onMouseClicked="#onClickMagnifyingGlass" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="58.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <Rectangle fx:id="rectanglePipe" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="16.0" layoutX="456.0" layoutY="546.0" onMouseClicked="#onClickPipe" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="34.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <Rectangle fx:id="rectanglePainting" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="86.0" layoutX="440.0" layoutY="251.0" onMouseClicked="#onClickPainting" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="137.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+
+      <Pane fx:id="moriartyOverlay" onMouseClicked="#backToNormalRoom" prefHeight="720.0" prefWidth="1018.0" visible="false">
+         <children>
+            <ImageView fx:id="overlayImage" fitHeight="720.0" fitWidth="1018.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/white_overlay.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="328.0" fitWidth="626.0" layoutX="107.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/speech_bubble_smaller.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="232.0" fitWidth="188.0" layoutX="671.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/moriarty.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelMessage" alignment="TOP_LEFT" layoutX="168.0" layoutY="131.0" prefHeight="218.0" prefWidth="505.0" styleClass="moriarty-item-message" text="Ah, a magnifying glass! A tool of observation, unlocking hidden details. Its lens holds the power to reveal truths. Embrace it." textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Gabriola" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="390.0" styleClass="moriarty-item-message" text="Click anywhere to continue" textFill="WHITE">
+               <font>
+                  <Font name="Gabriola" size="32.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <ImageView fx:id="moriarty" fitHeight="152.0" fitWidth="128.0" layoutX="880.0" layoutY="16.0" onMouseClicked="#goToChat" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/moriarty.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Pane fx:id="selfOverlay" onMouseClicked="#backToNormalRoom" prefHeight="720.0" prefWidth="1018.0" visible="false">
+         <children>
+            <ImageView fx:id="overlayImage1" fitHeight="720.0" fitWidth="1018.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/white_overlay.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="185.0" fitWidth="406.0" layoutX="306.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/self_bubble.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="385.0" layoutY="414.0" styleClass="click-to-continue-label" text="Click anywhere to continue" textFill="WHITE">
+               <font>
+                  <Font name="Gabriola" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelThought" alignment="CENTER" layoutX="338.0" layoutY="245.0" prefHeight="143.0" prefWidth="343.0" styleClass="moriarty-thinking-label" text="It seems Moriarty has the Key...Perhaps I'll brew some tea as a means to obtain the key." textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Gabriola" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

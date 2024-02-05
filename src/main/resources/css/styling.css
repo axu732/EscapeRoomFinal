@@ -1,0 +1,159 @@
+@font-face {
+    -fx-font-family: "Gabriela";
+    src: url("../css/fonts/Gabriela-Regular.ttf");
+}
+
+@font-face {
+    -fx-font-family: "Gabriola";
+    src: url("../css/fonts/gabriola.ttf");
+}
+
+.text-area {
+    -fx-font-family: 'Gabriela';
+    -fx-font-size: 25px;
+    -fx-line-height: 0.1;
+}
+
+.chat-text-area {
+    -fx-font-family: 'Gabriela';
+    -fx-font-size: 23px;
+    -fx-line-height: 0.4;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.diary-date {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 35px;
+    -fx-line-height: 0.4;
+}
+
+Button {
+    -fx-font-family: 'Gabriola';
+    -fx-text-fill: #f5e3b9;
+    -fx-border-color: #c3a257;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-color: linear-gradient(#613724, #a64e25);
+    -fx-background-radius: 10px;
+}
+
+Button:hover {
+    -fx-background-color: #af7a48;
+    -fx-text-fill: black;
+}
+
+.chat-button {
+    -fx-font-size: 27px;
+}
+
+.lounge-kitchen-button {
+    -fx-font-size: 24px;
+}
+
+.start-button {
+    -fx-font-size: 45px;
+}
+
+.moriarty-mute-button {
+    -fx-font-size: 33px;
+}
+
+.hint-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 48px;
+}
+
+.timer-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 52px;
+}
+
+.text-entry-area {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 22px;
+}
+
+.solve-riddle-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 52px;
+}
+
+.difficulty-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 54px;
+}
+
+.back-to-kitchen-button {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 29px;
+}
+
+.moriarty-thinking-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 23px;
+}
+
+.enter-code-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 84px;
+}
+
+.code-text-area {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 51px;
+}
+
+.code-buttons {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 26px;
+}
+
+.click-to-continue-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 30px;
+}
+
+.holmes-diary-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 44px;
+}
+
+.win-loss-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 100px;
+}
+
+.come-to-lounge-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 19px;
+}
+
+.intructions-moriarty-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 34px;
+}
+
+.intructions-point-click-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 38px;
+}
+
+.recipe-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 91px;
+}
+
+.moriarty-item-message {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 32px;
+}
+
+.ingredient-number-label {
+    -fx-font-family: 'Gabriola';
+    -fx-font-size: 96px;
+}
+
+.sucess-buttons {
+    -fx-font-size: 47px;
+}

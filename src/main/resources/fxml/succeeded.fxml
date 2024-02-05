@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1018.0" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.SucceededController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1018.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="238.0" fitWidth="222.0" layoutX="782.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/moriarty_sad.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="338.0" fitWidth="631.0" layoutX="170.0" layoutY="198.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/speech_bubble_bigger.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="361.0" layoutY="67.0" styleClass="win-loss-label" text="Success!" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="100.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="194.0" layoutY="220.0" prefHeight="179.0" prefWidth="534.0" styleClass="intructions-moriarty-label" text="Against my expectations, you have accomplished your goal with unexpected triumph." textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Gabriola" size="34.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="216.0" layoutY="345.0" prefHeight="164.0" prefWidth="501.0" styleClass="intructions-moriarty-label" text="Care to challenge your skills once more, or shall we wrap up this game?" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Gabriola" size="34.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonClose" layoutX="553.0" layoutY="545.0" mnemonicParsing="false" onAction="#onClose" styleClass="sucess-buttons" text="Close">
+         <font>
+            <Font name="Gabriola" size="47.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="mainMenuButton" layoutX="290.0" layoutY="545.0" mnemonicParsing="false" onAction="#onGoToMainMenu" styleClass="sucess-buttons" text="Play again">
+         <font>
+            <Font name="Gabriola" size="47.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>

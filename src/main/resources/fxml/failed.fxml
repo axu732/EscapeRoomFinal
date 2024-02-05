@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1018.0" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.FailedController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1018.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="238.0" fitWidth="222.0" layoutX="772.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/moriarty_laughing.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="338.0" fitWidth="631.0" layoutX="160.0" layoutY="188.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/speech_bubble_bigger.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="316.0" layoutY="66.0" prefHeight="117.0" prefWidth="326.0" styleClass="win-loss-label" text="Time's up!" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="100.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="200.0" layoutY="217.0" prefHeight="268.0" prefWidth="514.0" styleClass="holmes-diary-label" text="Your futile attempts have depleted your allotted time; make a choice – try again or accept defeat and depart." textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Gabriola" size="41.0" />
+         </font></Label>
+      <Button fx:id="buttonClose" layoutX="530.0" layoutY="545.0" mnemonicParsing="false" onAction="#onClose" styleClass="hint-label" text="Close">
+         <font>
+            <Font name="Gabriola" size="48.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="retryButton" layoutX="334.0" layoutY="545.0" mnemonicParsing="false" onAction="#onGoToMainMenu" styleClass="hint-label" text="Retry">
+         <font>
+            <Font name="Gabriola" size="48.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>
